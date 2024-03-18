@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./NewTransactionForm.css";
 const NewTransactionForm = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
     date: '',

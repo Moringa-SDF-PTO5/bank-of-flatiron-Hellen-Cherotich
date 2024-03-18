@@ -20,7 +20,7 @@ const App = () => {
   }, []);
 
   const handleNewTransaction = (formData) => {
-    fetch(`https://bank-of-flatiron-hellen-cherotich.onrender.com/transactions`, {
+    fetch("https://bank-of-flatiron-hellen-cherotich.onrender.com/transactions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,17 +35,15 @@ const App = () => {
       .catch((error) => console.error("Error adding transaction:", error));
   };
 
-  const handleSearch = (searchTerm) => {
-    const filtered = transactions.filter(transaction =>
-      transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredTransactions(filtered);
-  };
-
   return (
     <div>
       <h1>Bank of Flatiron</h1>
-      <SearchBar onSearch={handleSearch} />
+      <SearchBar onSearch={(searchTerm) => {
+        const filtered = transactions.filter(transaction =>
+          transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setFilteredTransactions(filtered);
+      }} />
       <NewTransactionForm onSubmit={handleNewTransaction} />
       <TransactionsTable transactions={filteredTransactions} />
     </div>
