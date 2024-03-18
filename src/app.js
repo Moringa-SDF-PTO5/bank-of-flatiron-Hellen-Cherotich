@@ -8,7 +8,7 @@ const App = () => {
   const [filteredTransactions, setFilteredTransactions] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/transactions")
+    fetch("http://https://json-server-2bly.onrender.com/transactions")
       .then((response) => response.json())
       .then((data) => {
         setTransactions(data);
@@ -20,7 +20,7 @@ const App = () => {
   }, []);
 
   const handleNewTransaction = (formData) => {
-    fetch("http://localhost:3000/transactions"), {
+    fetch("https://json-server-2bly.onrender.com/transactions"), {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
