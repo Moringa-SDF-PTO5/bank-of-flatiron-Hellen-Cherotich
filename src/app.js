@@ -8,7 +8,7 @@ const App = () => {
   const [filteredTransactions, setFilteredTransactions] = useState([]);
 
   useEffect(() => {
-    fetch("https://bank-of-flatiron-hellen-cherotich.onrender.com/transactions")
+    fetch("http://localhost:3000/transactions")
       .then((response) => response.json())
       .then((data) => {
         setTransactions(data);
@@ -20,13 +20,13 @@ const App = () => {
   }, []);
 
   const handleNewTransaction = (formData) => {
-    fetch("https://bank-of-flatiron-hellen-cherotich.onrender.com/transactions", {
+    fetch("http://localhost:3000/transactions"), {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
-    })
+    }
       .then((response) => response.json())
       .then((newTransaction) => {
         setTransactions([...transactions, newTransaction]);

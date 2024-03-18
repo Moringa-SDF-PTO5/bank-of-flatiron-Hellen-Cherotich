@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "Json": "$ json-server --watch db.json,https:/bank-of-flatiron-hellen-cherotich.onrender.com/transactions"
+    "Json": "$ json-server --watch db.json,https://localhost:3000/transactions"
   },
   "keywords": [],
   "author": "",

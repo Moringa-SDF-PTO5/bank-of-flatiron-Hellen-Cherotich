@@ -9,10 +9,9 @@ app.use(express.json());
 // Serve static files from the build directory
 app.use(express.static(path.join(__dirname, 'build')));
 
-// Example API routes - replace with your own route handlers
-app.get('/api/data', (req, res) => {
-    // Replace this with logic to handle your API endpoint
-    res.json({ message: 'API data here' });
+// Serve index.html for all routes
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 // Example POST route - replace with your own route handlers
@@ -22,12 +21,7 @@ app.post('/api/data', (req, res) => {
     res.json({ message: 'Data received successfully' });
 });
 
-// Serve index.html for all other routes
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
 // Start the server
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+app.listen(port, function () {
+    console.log('Server is running on port ' + port);
 });
