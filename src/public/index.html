@@ -8,14 +8,17 @@
 </head>
 <body>
     <div id="root"></div>
-    <!-- Use CDN links for React and ReactDOM production versions -->
+    
+    <!-- Include React and ReactDOM production versions from CDN -->
     <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-    <!-- Previous absolute path to your App.js file -->
+    
+    <!-- Include your main application script -->
     <script src="/root/phase_2/bank-of-flatiron-Hellen-Cherotich/src/app.js"></script>
-    <!-- Previous absolute path to your OtherComponent.js file -->
-    <script src="/root/phase_2/bank-of-flatiron-Hellen-Cherotich/src/OtherComponent.js"></script>
+    <!-- Include other component scripts if needed -->
+    <script src="/root/phase_2/bank-of-flatiron-Hellen-Cherotich/src"></script>
 
+    <!-- Render your React app -->
     <script type="text/babel">
         ReactDOM.render(<App />, document.getElementById('root'));
     </script>
