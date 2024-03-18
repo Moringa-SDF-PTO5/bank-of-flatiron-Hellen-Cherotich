@@ -4,12 +4,14 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start" : "node server.js"
+    "start": "node server.js",
+    "Json": "$ json-server --watch db.json,https:/bank-of-flatiron-hellen-cherotich.onrender.com/transactions"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.16.2"
+    "json": "^11.0.0",
+    "server": "^1.0.39"
   }
 }
