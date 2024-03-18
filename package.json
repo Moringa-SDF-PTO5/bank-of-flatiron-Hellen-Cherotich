@@ -1,17 +1,50 @@
 {
-  "name": "bankingapp-mock-api",
+  "name": "bank",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "proxy":"https://json-server-2bly.onrender.com/",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "cors": "^2.8.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "Json": "$ json-server --watch db.json,https://localhost:3000/transactions"
+    "Json": "$ json-server --watch db.json,https://localhost:3000/transactions",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "json": "^11.0.0",
-    "server": "^1.0.39"
-  }
+  "license": "ISC"
+   },
+  "development": [
+    "last 1 chrome version",
+    "last 1 firefox version",
+    "last 1 safari version"
+  ]
 }
+
+  
+
+
