@@ -1,4 +1,3 @@
-// NewTransactionForm.js
 import React, { useState } from "react";
 
 const NewTransactionForm = ({ onSubmit }) => {
@@ -30,7 +29,11 @@ const NewTransactionForm = ({ onSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      {/* Input fields here */}
+      <input type="date" name="date" value={formData.date} onChange={handleChange} />
+      <input type="text" name="description" placeholder="Description" value={formData.description} onChange={handleChange} />
+      <input type="text" name="category" placeholder="Category" value={formData.category} onChange={handleChange} />
+      <input type="number" name="amount" placeholder="Amount" value={formData.amount} onChange={handleChange} />
+      <button type="submit">Add Transaction</button>
     </form>
   );
 };
