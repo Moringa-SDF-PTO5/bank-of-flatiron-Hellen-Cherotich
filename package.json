@@ -2,7 +2,7 @@
   "name": "bank",
   "version": "1.0.0",
   "private": true,
-  "proxy":"https://json-server-2bly.onrender.com/",
+  "proxy":"https://json-server-8vqy.onrender.com/bots",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -16,8 +16,8 @@
 
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "Json": "$ json-server --watch db.json,https://localhost:3000/transactions",
+    "start": "react-scripts start",
+    "Json": "$ json-server --watch db.json,https://json-server-8vqy.onrender.com/bots",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
