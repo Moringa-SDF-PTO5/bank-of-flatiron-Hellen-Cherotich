@@ -2,7 +2,7 @@
   "name": "bot",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://json-server-8vqy.onrender.com/",
+  "proxy":"https://json-server-2bly.onrender.com/",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
@@ -62,10 +62,11 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "Json": "$ json-server --watch db.json,https://json-server-8vqy.onrender.com/transactions",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "start": "node server.js",
+    "Json": "$ json-server --watch db.json,https://localhost:3000/transactions",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
