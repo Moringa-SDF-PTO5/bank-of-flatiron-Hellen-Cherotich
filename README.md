@@ -1,84 +1,56 @@
+# Bank of Flatiron
 
-Bot Battlr
-Welcome to Bot Battlr, a React application where you can build and manage your own Bot Army.
+Bank of Flatiron is a simple web application for managing transactions.
 
-Table of Contents
-Introduction
-Installation
-Features
-Usage
-API Integration
-Technologies Used
-Author
-License
+## Features
 
-Introduction
-Bot Battlr allows you to browse through a list of available robots, view their details, and enlist them into your army. You can release bots from your army or permanently discharge them from both the frontend and backend.
+- View a list of transactions
+- Add new transactions
+- Search transactions by description
 
-Installation
-To run this application locally, follow these steps:
+## Installation
 
-Clone this repository to your local machine:
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/hcherotich/bank-of-flatiron.git
+2. Install dependencies:
+
 bash
 Copy code
-git clone https://github.com/Moringa-SDF-PTO5/botbattlr-Hellen-cherotich.git
-Navigate to the project directory:
-bash
-Copy code
-cd botbattlr-Hellen-cherotich
-Install dependencies using npm :
-bash
-Copy code
+cd bank-of-flatiron
 npm install
-or
-
-bash
-Copy code
-yarn install
 Start the development server:
+
 bash
 Copy code
 npm start
-or
+Open your browser and navigate to http://localhost:3000 to view the application.
 
-bash
-Copy code
-yarn start
-Features
-View profiles of all available bots in the Bot Collection.
-Add individual bots to your army by clicking on them.
-Release bots from your army by clicking on them.
-Permanently discharge bots .
 Usage
-Once the application is running, you can access it in your web browser. You will see two sections:
+View a list of transactions on the main page.
+Use the search bar to filter transactions by description.
+Add new transactions using the form at the top of the page.
+Components
+App.js
+This component serves as the main entry point for the application. It fetches transaction data from an API, renders the search bar, new transaction form, and the transactions table.
 
-Bot Collection: Displays all available bots. Click on a bot to enlist it into your army.
-Your Bot Army: Displays the bots enlisted into your army. Click on a bot to release it from your army or permanently discharge it by clicking the red "x" button.
-API Integration
-The application integrates with a JSON server to fetch and manipulate bot data. The endpoints used are:
+NewTransactionForm.js
+This component provides a form for adding new transactions. Users can input the date, description, category, and amount for the transaction.
 
-GET /bots: Retrieve a list of available bots.
-DELETE /bots/:id: Delete a bot by its ID.
+SearchBar.js
+This component implements a simple search bar for filtering transactions by description.
+
+TransactionsTable.js
+This component displays a table of transactions, including their date, description, category, and amount.
 
 Technologies Used
 React
-useState and useEffect hooks for state management and side effects.
-Fetch API for asynchronous data fetching.
-JSON server for backend simulation.
-
-
+HTML
+CSS
+JSON Server (for simulating backend data)
+Contributing
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
 License
 This project is licensed under the MIT License.
-
-
-
-
-
-
-
-
-
-
-
-
