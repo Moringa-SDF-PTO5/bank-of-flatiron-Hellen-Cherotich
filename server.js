@@ -6,12 +6,12 @@ const port = process.env.PORT || 3000;
 // Middleware for parsing JSON bodies
 app.use(json());
 
-// Serve static files from the build directory
-app.use(static(join(__dirname, 'build')));
+// Serve static files from the public directory
+app.use(static(join(__dirname, 'src', 'public')));
 
 // Serve index.html for all routes
 app.get('*', function (req, res) {
-    res.sendFile(join(__dirname, 'build', 'index.html'));
+    res.sendFile(join(__dirname, 'src', 'public', 'index.html'));
 });
 
 // Example POST route - replace with your own route handlers
