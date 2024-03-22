@@ -1,5 +1,5 @@
 {
-  "name": "bot",
+  "name": "bank",
   "version": "0.1.0",
   "private": true,
   "proxy":"https://json-server-2bly.onrender.com/",
@@ -62,8 +62,8 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
-    "start": "node server.js",
-    "Json": "$ json-server --watch db.json,https://localhost:3000/transactions",
+    "start": "node server.cjs",
+    "json": "$ json-server --watch db.json --https://localhost:3000/transactions",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
