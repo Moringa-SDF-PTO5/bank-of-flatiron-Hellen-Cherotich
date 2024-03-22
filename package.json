@@ -14,7 +14,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start --public-url /root/botbattlr-Hellen-cherotich/src/public/index.html",
+
     "Json": "$ json-server --watch db.json,https://json-server-8vqy.onrender.com/transactionss",
     "build": "react-scripts build",
     "test": "react-scripts test",
