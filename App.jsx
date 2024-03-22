@@ -1,5 +1,4 @@
-import React from "react";
-import { ReactDOM } from "react";
+import React, { useState, useEffect } from "react";
 import TransactionsTable from "./TransactionsTable";
 import NewTransactionForm from "./NewTransactionForm";
 import SearchBar from "./SearchBar";
@@ -15,19 +14,17 @@ const App = () => {
         setTransactions(data);
         setFilteredTransactions(data);
       })
-      .catch((error) =>
-        console.error("Error fetching transactions:", error)
-      );
+      .catch((error) => console.error("Error fetching transactions:", error));
   }, []);
 
   const handleNewTransaction = (formData) => {
-    fetch(`httpshttp://json-server-2bly.onrender.com/transactions/${transactionID}`), {
+    fetch("http://json-server-2bly.onrender.com/transactions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
-    }
+    })
       .then((response) => response.json())
       .then((newTransaction) => {
         setTransactions([...transactions, newTransaction]);
@@ -39,12 +36,14 @@ const App = () => {
   return (
     <div>
       <h1>Bank of Flatiron</h1>
-      <SearchBar onSearch={(searchTerm) => {
-        const filtered = transactions.filter(transaction =>
-          transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-        setFilteredTransactions(filtered);
-      }} />
+      <SearchBar
+        onSearch={(searchTerm) => {
+          const filtered = transactions.filter((transaction) =>
+            transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
+          );
+          setFilteredTransactions(filtered);
+        }}
+      />
       <NewTransactionForm onSubmit={handleNewTransaction} />
       <TransactionsTable transactions={filteredTransactions} />
     </div>
