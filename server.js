@@ -6,7 +6,11 @@ const app = express();
 // Serve static files from the 'build' directory
 app.use(express.static(path.join(__dirname, 'build')));
 
-// Define your routes or other server logic here
+// Define route handler for the root URL
+app.get('/', (req, res) => {
+  // Send the main HTML file or render your application's main page here
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

@@ -63,7 +63,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "json": "$ json-server --watch db.json --https://localhost:3000/transactions",
+    "json": "$ json-server --watch db.json --https:/json-server-2bly.onrender.com/transactions",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
