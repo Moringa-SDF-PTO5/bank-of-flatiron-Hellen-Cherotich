@@ -1,6 +1,7 @@
-
 import express from 'express';
 import { join } from 'path';
+
+const __dirname = new URL('.', import.meta.url).pathname;
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -27,4 +28,3 @@ app.post('/api/data', (req, res) => {
 app.listen(port, function () {
     console.log('Server is running on port ' + port);
 });
-
