@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 // Define route handler for the root URL
 app.get('/', (req, res) => {
   // Send the main HTML file or render your application's main page here
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 const PORT = process.env.PORT || 3000;
