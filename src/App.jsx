@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TransactionsTable from "./TransactionsTable";
-import newTransaction from "./NewTransaction"
+import NewTransactionForm from "./NewTransaction";
 import SearchBar from "./SearchBar";
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
   const [filteredTransactions, setFilteredTransactions] = useState([]);
 
   useEffect(() => {
-    fetch("http://json-server-2bly.onrender.com/transactions")
+    fetch("/api/transactions")
       .then((response) => response.json())
       .then((data) => {
         setTransactions(data);
@@ -18,7 +18,7 @@ const App = () => {
   }, []);
 
   const handleNewTransaction = (formData) => {
-    fetch("http://json-server-2bly.onrender.com/transactions", {
+    fetch("/api/transactions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
