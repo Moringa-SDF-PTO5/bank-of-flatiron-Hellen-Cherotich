@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TransactionsTable from "./TransactionsTable";
-import NewTransactionForm from "./NewTransactionForm";
+import newTransaction from "./NewTransaction"
 import SearchBar from "./SearchBar";
 
 const App = () => {

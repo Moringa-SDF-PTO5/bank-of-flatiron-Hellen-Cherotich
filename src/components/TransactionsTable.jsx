@@ -1,5 +1,5 @@
 import React from "react";
-
+import NewTransaction from "./NewTransaction"
 const TransactionsTable = ({ transactions }) => {
   return (
     <table>
