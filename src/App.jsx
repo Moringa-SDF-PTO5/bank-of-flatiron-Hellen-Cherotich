@@ -9,7 +9,12 @@ const App = () => {
 
   useEffect(() => {
     fetch("/api/transactions")
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to fetch transactions");
+        }
+        return response.json();
+      })
       .then((data) => {
         setTransactions(data);
         setFilteredTransactions(data);
@@ -25,7 +30,12 @@ const App = () => {
       },
       body: JSON.stringify(formData),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to add transaction");
+        }
+        return response.json();
+      })
       .then((newTransaction) => {
         setTransactions([...transactions, newTransaction]);
         setFilteredTransactions([...filteredTransactions, newTransaction]);
