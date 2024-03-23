@@ -2,9 +2,8 @@
   "name": "bank",
   "version": "0.1.0",
   "private": true,
-  "proxy":"https://json-server-2bly.onrender.com/",
+  "proxy": "https://json-server-2bly.onrender.com/",
   "dependencies": {
-    "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.17.0",
@@ -87,7 +86,11 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.3",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-transform-modules-commonjs": "^7.24.1",
+    "@babel/preset-env": "^7.24.3"
   },
   "jest": {
     "roots": [
@@ -148,15 +151,11 @@
       ],
       "resetMocks": true
     }
-    
-   
   },
   "babel": {
     "presets": [
       "react-app"
     ]
   },
-  
-    "type": "commonjs"
-  
+  "type": "module"
 }
